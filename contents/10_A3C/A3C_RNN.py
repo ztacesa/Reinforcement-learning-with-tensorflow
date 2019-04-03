@@ -18,6 +18,7 @@ import gym
 import os
 import shutil
 import matplotlib.pyplot as plt
+from save_data import *
 
 GAME = 'Pendulum-v0'
 OUTPUT_GRAPH = True
@@ -219,7 +220,10 @@ if __name__ == "__main__":
         worker_threads.append(t)
     COORD.join(worker_threads)
 
-    plt.plot(np.arange(len(GLOBAL_RUNNING_R)), GLOBAL_RUNNING_R)
-    plt.xlabel('step')
-    plt.ylabel('Total moving reward')
-    plt.savefig('./test.png')
+    print(GLOBAL_RUNNING_R)
+
+text_save(GLOBAL_RUNNING_R, None)
+    # plt.plot(np.arange(len(GLOBAL_RUNNING_R)), GLOBAL_RUNNING_R)
+    # plt.xlabel('step')
+    # plt.ylabel('Total moving reward')
+    # plt.savefig('./test.png')
