@@ -222,5 +222,4 @@ if __name__ == "__main__":
     plt.plot(np.arange(len(GLOBAL_RUNNING_R)), GLOBAL_RUNNING_R)
     plt.xlabel('step')
     plt.ylabel('Total moving reward')
-    plt.show()
-
+    plt.savefig('./test.png')
